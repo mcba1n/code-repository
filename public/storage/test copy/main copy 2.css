@@ -1,0 +1,90 @@
+body {
+    background-image: url(../images/round.png);
+    background-repeat: repeat;
+}
+
+@font-face {
+    font-family: palanquindark-regular;
+    src: url(fonts/palanquindark-regular.ttf);
+}
+
+@font-face {
+    font-family: palanquin-medium;
+    src: url(fonts/palanquin-medium.ttf);
+}
+
+@font-face {
+    font-family: palanquin-extralight;
+    src: url(fonts/palanquin-extralight.ttf);
+}
+
+.topic {
+    padding: 10px;
+    border-bottom: 2px solid black;
+    border-top: 2px dotted grey;
+    margin-bottom: 10px;
+    background: #FFF;
+}
+
+.topic_name {
+    font-weight: bold;
+    cursor: pointer;
+    font-family: palanquin-medium;
+}
+
+.topic_name:hover {
+    text-decoration: underline;
+}
+
+.topic_file {
+    text-indent: 20px;
+    cursor: pointer;
+    font-family: palanquin-extralight;
+}
+
+.topic_files {
+    display: none;
+}
+
+.topic_file:hover {
+    text-decoration: underline;
+}
+
+.topic_wrapper {
+    width: 300px;
+    padding: 20px;
+    float: left;
+    margin: 2px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.topic_wrapper h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.iframe_wrapper {
+    float: left;
+    margin: 10px;
+}
+
+#myIframe {
+    width: 700px;
+    height: 700px;
+    border: none;
+    background: url(../images/duck.png) center center no-repeat;
+    background-size: 50px;
+    border: 3px solid black;
+    position: fixed;
+    margin-left: 360px;
+    transition: 0.3s;
+}
+
+#myIframe:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+h1 {
+    font-family: palanquindark-regular;
+}

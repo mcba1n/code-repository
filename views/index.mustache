@@ -1,0 +1,39 @@
+<html>
+<header>
+    <title>Home</title>
+    <link rel="stylesheet" href="/public/styles/main.css">
+</header>
+<body>
+    <h1>rey_pato's code repository</h1>
+    <div class="topic_wrapper">
+    {{#files}}
+    <div class="topic">
+        <div class="topic_name" onclick='hideUnhide({{id}})'>{{name}}</div>
+        <div class="topic_files">
+        {{#inner_dir}}
+        <div class="topic_file" onclick="displayToIframe('{{dir}}')" >{{name}}</div>
+        {{/inner_dir}}
+        </div>
+    </div>
+    {{/files}}
+    </div><iframe allowtransparency="true" style="background-color: #FFF;" id="myIframe"></iframe>
+    <script>
+        function displayToIframe(dir) {
+            var frame_id = "myIframe";
+            var myIframe = document.getElementById(frame_id);
+            myIframe.src = "/reader?f=" + dir;
+        }
+
+        function hideUnhide(id) {
+            var topics = document.getElementsByClassName("topic_files");
+            var thisTopic = topics[id];
+                    
+            if (thisTopic.style.display == "none") {
+                thisTopic.style.display = "block";
+            } else {
+                thisTopic.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
